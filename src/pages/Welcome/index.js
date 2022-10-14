@@ -30,7 +30,7 @@ export default function Welcome(){
                 <TextInput style={styles.Input2}>
                     Senha:
                 </TextInput>
-                <TouchableOpacity onPress={ () => navigation.navigate('Telas')}  style={styles.button}>
+                <TouchableOpacity onPress={ () => navigation.navigate('Metas')}  style={styles.button}>
                     <Text>
                         Acessar
                     </Text>
