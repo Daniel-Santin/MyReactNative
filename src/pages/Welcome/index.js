@@ -1,6 +1,9 @@
 import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
+import {  useNavigation  } from '@react-navigation/native'
 
+
+const navigation = useNavigation();
 export default function Welcome(){
     return(
         <View style={styles.container}>
@@ -27,9 +30,14 @@ export default function Welcome(){
                 <TextInput style={styles.Input2}>
                     Senha:
                 </TextInput>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity onPress={ () => navigation.navigate('Telas')}  style={styles.button}>
                     <Text>
-                        ACESS
+                        Acessar
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={ () => navigation.navigate('SignIn')}  style={styles.button}>
+                    <Text>
+                        Cadastrar
                     </Text>
                 </TouchableOpacity>
             </View>
